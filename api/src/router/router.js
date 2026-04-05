@@ -8,18 +8,17 @@ import { Router } from "express";
 const router = Router();
 
 // Rota GET -> usada para buscar/listar as doações no banco
-router.get('/doacaos', getDoacoes);
+router.get('/doacoes', getDoacoes);
 
 // Rota POST -> usada para adicionar uma nova doação
-router.post('/doacaos', addDonation);
+router.post('/doacoes', addDonation);
 
 // Rota PUT -> usada para atualizar uma doação existente
-// (⚠️ aqui normalmente deveria ter um ID na URL para identificar qual atualizar)
-router.put('/doacaos/:id', updateDonation);
+router.put('/doacoes/:id', updateDonation);
 
 // Rota DELETE -> usada para deletar uma doação específica
 // Recebe dois parâmetros na URL: id e uuid
-router.delete('/doacaos/:id/:uuid', deleteDonation);
+router.delete('/doacoes/:id/:uuid', deleteDonation);
 
 // Exporta o router para ser usado no server.js
 export default router;

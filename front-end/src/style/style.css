@@ -1,0 +1,72 @@
+*{
+    font-family: "Roboto Mono", monospace;
+}
+
+header{
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding:0px 60px 0px 60px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+
+}
+
+header li{
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.bodySection{
+    background-color: #FAFAFA;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items:center ;
+}
+
+.listDonation{
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)  ;
+    height: 60%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+thead{
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+footer{
+    background-color: #4CAF50;
+}
