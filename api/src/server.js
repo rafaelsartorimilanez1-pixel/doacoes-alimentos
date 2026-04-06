@@ -5,6 +5,8 @@ import router from './router/router.js';
 const app = express();
 const port = 4000;
 
+app.use(express.json())
+
 // Middlewares
 app.use(cors()); // Permite requisições externas
 app.use(express.json()); // Permite receber JSON

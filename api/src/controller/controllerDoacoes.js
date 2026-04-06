@@ -1,5 +1,8 @@
 // Importa a conexão com o banco de dados
 import connection from "../db.js";
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 
 // =========================
@@ -34,13 +37,15 @@ export const addDonation = async (request, response) => {
 
     // Valores vindos do corpo da requisição
     const values = [
-        request.body.uuid,
+        uuidv4(),
         request.body.alimento,
         request.body.quantidade,
         request.body.bairro,
         request.body.categoria,
         request.body.tipo,
     ];
+
+    console.log(request.body)
 
     try {
         // Executa o INSERT no banco

@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useEffect, useState} from 'react';
+  import React, {useEffect, useState} from 'react';
 import Home from './pages/home.jsx'
 import axios from 'axios'
 
@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     getItems()
   }, [])
+
 
   return (
     <div className="App">

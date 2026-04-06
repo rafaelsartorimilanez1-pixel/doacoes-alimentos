@@ -14,7 +14,7 @@ router.get('/doacoes', getDoacoes);
 router.post('/doacoes', addDonation);
 
 // Rota PUT -> usada para atualizar uma doação existente
-router.put('/doacoes/:id', updateDonation);
+router.put('/doacoes/:id/:uuid', updateDonation);
 
 // Rota DELETE -> usada para deletar uma doação específica
 // Recebe dois parâmetros na URL: id e uuid

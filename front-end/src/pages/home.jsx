@@ -1,61 +1,28 @@
-import React from 'react';
-//import { FaTrash, FaEdit } from "react-icons/fa";
+import React, {useState} from 'react';
 import '../style/style.css'
+import Header from '../componentes/Header.jsx'
+import Footer from '../componentes/Footer.jsx'
+import Donationlist from '../componentes/DonationsList.jsx'
+import AddComponent from '../componentes/AddComponent.jsx'
 
 const Home = ({items}) => {
+
+    const [showForm, setShowForm] = useState(false)
+
+    const handleShowForm = () => {
+    setShowForm(!showForm)
+}
 
 
     return(
         <>
-            <header> 
+            <Header />
+            
+            {showForm && <AddComponent />}
 
-                <h1>Ia Solídaria</h1> 
+            <Donationlist items={items} onAddClick={handleShowForm} />
 
-                <nav>
-                    <ul>
-                        <li>Página 1</li>
-                        <li>Página 2</li>
-                        <li>Página 3</li>
-                    </ul>
-                </nav>
-
-            </header>
-
-
-            <section className='bodySection'>
-
-                <div className='listDonation'>
-                    <h2>Lista de Doações</h2>
-                    <table>
-                    <thead>
-                        <tr>
-                            <th>Alimento</th>
-                            <th>Quantidade</th>
-                            <th>Tipo</th>
-                            <th>Bairro</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {items.map((item) => (
-                        <tr key={item.uuid}>
-                            <td>{item.alimento}</td>
-                            <td>{item.quantidade}</td>
-                            <td>{item.tipo}</td>
-                            <td>{item.bairro}</td>
-                        </tr>
-                        ))}
-                    </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <footer>
-                <h4>Todos os direitos reservados. ©</h4>
-            </footer>
-
-
-
+            <Footer />
         </>
     )
 }

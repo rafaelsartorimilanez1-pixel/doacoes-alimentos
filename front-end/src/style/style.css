@@ -2,11 +2,12 @@
     font-family: "Roboto Mono", monospace;
 }
 
+/* HEADER */
 header{
     background-color: #4CAF50;
     display: flex;
     align-items: center;
-    justify-content: space-between ;
+    justify-content: space-between;
     padding:0px 60px 0px 60px;
 }
 
@@ -14,7 +15,6 @@ header ul{
     display: flex;
     list-style: none;
     gap: 25px;
-
 }
 
 header li{
@@ -23,24 +23,56 @@ header li{
     cursor: pointer;
 }
 
+/* TITULO */
+h2{
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* SECTION PRINCIPAL */
 .bodySection{
     background-color: #FAFAFA;
     display: flex;
     height: 90vh;
     justify-content: center;
-    align-items:center ;
+    align-items:center;
 }
 
+/* CARD LISTA */
 .listDonation{
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)  ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     height: 60%;
     width: 70%;
     display: flex;
     flex-direction: column;
 }
 
+/* HEADER DA LISTA */
+.headerList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* BOTÃO ADD */
+#buttonAdd {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+#buttonAdd:hover {
+    background-color: #3e8e41;
+}
+
+/* TABELA */
 table{
     width: 90%;
     border-collapse: collapse;
@@ -67,6 +99,69 @@ tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-footer{
+/* ICONES */
+#icon-actions{
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* ========================= */
+/* FORMULÁRIO (CORRIGIDO) */
+/* ========================= */
+
+.bodyForm{
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* CARD DO FORM */
+.form{
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px 30px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+/* LABEL */
+.form label{
+    font-size: 14px;
+    color: #555;
+}
+
+/* INPUT */
+.form input{
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* FOCO */
+.form input:focus{
+    border-color: #4CAF50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.3);
+}
+
+/* BOTÃO DO FORM (se adicionar depois) */
+.form button{
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
     background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: #3e8e41;
 }
